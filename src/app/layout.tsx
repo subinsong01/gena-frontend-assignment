@@ -14,12 +14,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        {" "}
+      <body className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex flex-col justify-center h-screen mx-5 sm:mx-15">
+        <main className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] p-8">
           {children}
         </main>
+        <footer className="text-center p-4 text-sm text-gray-500">
+          © 2025 Gena Dashboard
+        </footer>
       </body>
     </html>
   );
