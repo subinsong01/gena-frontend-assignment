@@ -14,7 +14,7 @@ export default function InputBox({
 }: InputBoxProps) {
   return (
     <div className="flex flex-col mb-2">
-      <label htmlFor={id} className="mb-2 font-bold text-3xl">
+      <label htmlFor={id} className="mb-4 font-bold text-3xl">
         {label}
       </label>
       <input
