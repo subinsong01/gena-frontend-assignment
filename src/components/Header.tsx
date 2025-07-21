@@ -11,7 +11,7 @@ export default function Header() {
     <>
       <header
         onClick={handleGoToMainPage}
-        className="w-full px-10 py-4 text-primary-color font-title text-base cursor-pointer"
+        className="w-full px-7 py-3 text-primary-color font-title text-base cursor-pointer"
       >
         gena <br />
         DashBoard
