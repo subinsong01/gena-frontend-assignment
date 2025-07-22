@@ -15,7 +15,7 @@ export default function DropdownSelect({
 }: DropdownSelectProps) {
   return (
     <div className="flex flex-col mb-2">
-      <label htmlFor={id} className="mb-4 font-bold text-3xl">
+      <label htmlFor={id} className="mb-4 font-bold text-xl">
         {label}
       </label>
       <select
