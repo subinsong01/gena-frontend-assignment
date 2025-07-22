@@ -20,8 +20,8 @@ export default function ConfigureChart() {
   return (
     <section className="w-full max-w-xl mx-auto animate-fadeUp mt-6">
       {dashboardName && (
-        <h2 className="text-xl font-semibold mb-4">
-          <span className="text-blue-500">{dashboardName}</span>
+        <h2 className="text-xl font-semibold mb-10">
+          <span className="text-4xl text-primary-color">{dashboardName}</span>
         </h2>
       )}
       <div className="flex flex-col gap-4">
