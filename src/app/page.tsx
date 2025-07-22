@@ -7,6 +7,10 @@ export default function Home() {
     router.push("/input-information");
   };
 
+  const goToDashBoardPage = () => {
+    router.push("/dashboard");
+  };
+
   return (
     <main className="flex flex-col items-center justify-center p-8">
       <h1 className="text-4xl font-extrabold mb-4">
@@ -19,7 +23,13 @@ export default function Home() {
         onClick={goToInputInformationPage}
         className="mt-6 px-10 py-3 font-bold bg-primary-color text-white hover:bg-primary-color-hover transition rounded-lg"
       >
-        Create New Dashboard
+        ➕ Create New Dashboard
+      </button>
+      <button
+        onClick={goToDashBoardPage}
+        className="mt-6 px-10 py-3 font-bold bg-primary-color text-white hover:bg-primary-color-hover transition rounded-lg"
+      >
+        📁 Go to DashBoard Page
       </button>
     </main>
   );
