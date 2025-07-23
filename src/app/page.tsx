@@ -8,7 +8,7 @@ export default function Home() {
   };
 
   const goToDashBoardPage = () => {
-    router.push("/dashboard");
+    router.push("/dashboards");
   };
 
   return (
