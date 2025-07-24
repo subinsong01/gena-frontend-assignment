@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import CustomToastContainer from "@/components/ToastContainer";
 
 export const metadata: Metadata = {
   title: "Gena DashBoard",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <footer className="text-center p-4 text-sm text-gray-500">
           © 2025 Gena Dashboard
         </footer>
+        <CustomToastContainer />
       </body>
     </html>
   );
