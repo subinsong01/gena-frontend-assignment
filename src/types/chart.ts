@@ -1,16 +1,17 @@
-export const CHART_TYPES = [
-  { value: "bar", label: "Bar Chart" },
-  { value: "line", label: "Line Chart" },
-  { value: "number", label: "Number" },
-] as const;
+export const CHART_TYPES = ["bar", "line", "number"] as const;
+export type ChartType = (typeof CHART_TYPES)[number];
 
-export type ChartType = (typeof CHART_TYPES)[number]["value"];
+export interface ChartData {
+  value?: number;
+  labels?: string[];
+  values?: number[];
+}
 
 export interface Chart {
   id: string;
   dashboardId: string;
   type: ChartType;
   title: string;
-  data: { value: number } | { labels: string[]; values: number[] };
-  order: number;
+  data: ChartData;
+  order?: number;
 }

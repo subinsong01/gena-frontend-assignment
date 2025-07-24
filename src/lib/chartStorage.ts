@@ -1,10 +1,12 @@
+import { ChartType, ChartData } from "@/types/chart";
+
 export interface Chart {
   id: string;
   dashboardId: string;
-  type: "bar" | "line" | "number";
+  type: ChartType;
   title: string;
   order?: number;
-  data: any;
+  data: ChartData;
 }
 
 const CHARTS_STORAGE_KEY = "charts";

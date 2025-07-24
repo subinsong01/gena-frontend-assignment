@@ -4,6 +4,7 @@ import { useRouter, useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import ChartEditForm from "@/components/ChartEditForm";
 import Spinner from "@/components/Spinner";
+import { ChartType } from "@/types/chart";
 import { loadCharts, saveCharts, Chart } from "@/lib/chartStorage";
 export default function EditChartPage() {
   const router = useRouter();
@@ -44,5 +45,11 @@ export default function EditChartPage() {
       </div>
     );
 
-  return <ChartEditForm {...chart} onSave={handleSave} />;
+  return (
+    <ChartEditForm
+      {...chart}
+      type={chart.type as ChartType}
+      onSave={handleSave}
+    />
+  );
 }

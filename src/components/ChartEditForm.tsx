@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import ChartFormInputs from "@/components/ChartFormInputs";
-import { ChartType } from "@/constants/chartTypes";
+import { Chart, ChartType } from "@/types/chart";
 
-interface ChartData {
+export interface ChartData {
   value?: number;
   labels?: string[];
   values?: number[];
@@ -16,13 +16,7 @@ interface ChartEditFormProps {
   type: ChartType;
   title: string;
   data: ChartData;
-  onSave: (updatedChart: {
-    id: string;
-    dashboardId: string;
-    type: ChartType;
-    title: string;
-    data: ChartData;
-  }) => void;
+  onSave: (updatedChart: Chart) => void;
 }
 
 export default function ChartEditForm({
@@ -48,9 +42,12 @@ export default function ChartEditForm({
 
   const [error, setError] = useState("");
 
+  const handleChartTypeChange = (value: ChartType) => {
+    setChartType(value);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     setError("");
 
     let newData: ChartData = {};
@@ -80,6 +77,7 @@ export default function ChartEditForm({
         setError("Labels and values must have the same length");
         return;
       }
+
       newData.labels = labels;
       newData.values = values;
     }
@@ -119,7 +117,7 @@ export default function ChartEditForm({
         error={error}
         isLoading={false}
         onChartNameChange={setTitle}
-        onChartTypeChange={setChartType}
+        onChartTypeChange={handleChartTypeChange}
         onNumberValueChange={setNumberValue}
         onLabelsInputChange={setLabelsInput}
         onValuesInputChange={setValuesInput}
