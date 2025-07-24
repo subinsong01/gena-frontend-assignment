@@ -4,7 +4,11 @@ export default function Home() {
   const router = useRouter();
 
   const goToInputInformationPage = () => {
-    router.push("/input-information");
+    router.push("/create-dashboard");
+  };
+
+  const goToDashBoardPage = () => {
+    router.push("/dashboards");
   };
 
   return (
@@ -19,7 +23,13 @@ export default function Home() {
         onClick={goToInputInformationPage}
         className="mt-6 px-10 py-3 font-bold bg-primary-color text-white hover:bg-primary-color-hover transition rounded-lg"
       >
-        Create New Dashboard
+        ➕ Create New Dashboard
+      </button>
+      <button
+        onClick={goToDashBoardPage}
+        className="mt-6 px-10 py-3 font-bold bg-primary-color text-white hover:bg-primary-color-hover transition rounded-lg"
+      >
+        📁 Go to DashBoard Page
       </button>
     </main>
   );
