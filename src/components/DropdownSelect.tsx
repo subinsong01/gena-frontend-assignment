@@ -22,7 +22,7 @@ export default function DropdownSelect({
         id={id}
         {...props}
         className="
-        border border-gray-300 rounded-lg px-4 py-3
+        border border-input-box-color rounded-lg px-4 py-3
         shadow-sm
         transition
         duration-300
