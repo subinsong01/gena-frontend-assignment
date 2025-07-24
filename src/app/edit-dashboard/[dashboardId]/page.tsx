@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Dashboard } from "@/types/dashboards";
 import useLoadingStore from "@/app/store/useLoadingStore";
 import Spinner from "@/components/Spinner";
-import { loadDashboards, saveDashboards } from "@/lib/localDb";
+import { loadDashboards, saveDashboards } from "../../../lib/dashboardStorage";
 import { toast } from "react-toastify";
 export default function EditDashboardPage({
   params,

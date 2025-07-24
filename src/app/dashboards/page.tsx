@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Dashboard } from "@/types/dashboards";
 import { initialDashboards } from "@/lib/data";
-import { loadDashboards, saveDashboards } from "@/lib/localDb";
+import { loadDashboards, saveDashboards } from "../../lib/dashboardStorage";
 import { toast } from "react-toastify";
 import DragAndDrop from "@/components/DragAndDrop";
 import { DashboardListItem } from "@/components/DashboardListItem";
