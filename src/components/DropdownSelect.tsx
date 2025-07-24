@@ -15,13 +15,26 @@ export default function DropdownSelect({
 }: DropdownSelectProps) {
   return (
     <div className="flex flex-col mb-2">
-      <label htmlFor={id} className="mb-4 font-bold text-xl">
+      <label htmlFor={id} className="mb-3 text-xl">
         {label}
       </label>
       <select
         id={id}
         {...props}
-        className="border rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-primary-color"
+        className="
+        border border-gray-300 rounded-lg px-4 py-3
+        shadow-sm
+        transition
+        duration-300
+        ease-in-out
+        focus:outline-none
+        focus:ring-1
+        focus:ring-primary-color
+        focus:border-primary-color
+        hover:border-primary-color
+        placeholder-gray-400
+        text-gray-900
+      "
       >
         {options.map(({ value, label }) => (
           <option key={value} value={value}>
