@@ -90,24 +90,6 @@ export default function ChartEditForm({
       onSubmit={handleSubmit}
       className="bg-white shadow-xl rounded-xl p-6 w-full max-w-lg mx-auto space-y-4"
     >
-      <div>
-        <label
-          htmlFor="title"
-          className="block text-sm font-medium text-information-color mb-1"
-        >
-          Title
-        </label>
-        <input
-          id="title"
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-3 py-2 placeholder-information-color focus:outline-none focus:ring-2 focus:ring-primary-color focus:border-transparent transition"
-          placeholder="Enter chart title"
-          required
-        />
-      </div>
-
       <ChartFormInputs
         chartName={title}
         chartType={chartType}
