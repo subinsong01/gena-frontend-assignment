@@ -61,7 +61,7 @@ export default function ChartFormInputs({
         label="Chart Type"
         options={CHART_TYPES}
         value={chartType}
-        onChange={(e) => onChartTypeChange(e.target.value as ChartType)}
+        onChange={onChartTypeChange}
         disabled={isLoading}
       />
 

@@ -1,17 +1,24 @@
-import React from "react";
+"use client";
 
-interface DropdownSelectProps
-  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+import React from "react";
+import { ChartType } from "@/types/chart";
+
+interface DropdownSelectProps {
   id: string;
   label: string;
-  options: { value: string; label: string }[];
+  options: readonly { value: string; label: string }[];
+  value: ChartType;
+  onChange?: (value: ChartType) => void;
+  disabled?: boolean;
 }
 
 export default function DropdownSelect({
   id,
   label,
   options,
-  ...props
+  value,
+  onChange,
+  disabled,
 }: DropdownSelectProps) {
   return (
     <div className="flex flex-col mb-2">
@@ -20,21 +27,23 @@ export default function DropdownSelect({
       </label>
       <select
         id={id}
-        {...props}
+        value={value}
+        onChange={(e) => onChange?.(e.target.value as ChartType)}
+        disabled={disabled}
         className="
-        border border-input-box-color rounded-lg px-4 py-3
-        shadow-sm
-        transition
-        duration-300
-        ease-in-out
-        focus:outline-none
-        focus:ring-1
-        focus:ring-primary-color
-        focus:border-primary-color
-        hover:border-primary-color
-        placeholder-gray-400
-        text-gray-900
-      "
+          border border-input-box-color rounded-lg px-4 py-3
+          shadow-sm
+          transition
+          duration-300
+          ease-in-out
+          focus:outline-none
+          focus:ring-1
+          focus:ring-primary-color
+          focus:border-primary-color
+          hover:border-primary-color
+          placeholder-gray-400
+          text-gray-900
+        "
       >
         {options.map(({ value, label }) => (
           <option key={value} value={value}>
