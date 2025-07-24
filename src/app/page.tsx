@@ -4,7 +4,7 @@ export default function Home() {
   const router = useRouter();
 
   const goToInputInformationPage = () => {
-    router.push("/input-information");
+    router.push("/create-dashboard");
   };
 
   const goToDashBoardPage = () => {
