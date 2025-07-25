@@ -32,7 +32,7 @@ export function useDashboardForm() {
       toast.success("Dashboard created successfully!");
 
       setTimeout(() => {
-        router.push(`/chart?mode=create&dashboardId=${dashboard.id}`);
+        router.push(`/chart?mode=configure&dashboardId=${dashboard.id}`);
       }, 1000);
     } catch (err) {
       console.error(err);
