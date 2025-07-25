@@ -5,3 +5,4 @@ export const CHART_TYPES = [
 ] as const;
 
 export type ChartType = (typeof CHART_TYPES)[number]["value"];
+//컴포넌트의 옵션으로 사용

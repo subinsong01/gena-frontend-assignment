@@ -32,7 +32,7 @@ export function useDashboardForm() {
       toast.success("Dashboard created successfully!");
 
       setTimeout(() => {
-        router.push(`/chart?mode=configure&dashboardId=${dashboard.id}`);
+        router.push(`/chart?mode=create&dashboardId=${dashboard.id}`);
       }, 1000);
     } catch (err) {
       console.error(err);
@@ -50,3 +50,4 @@ export function useDashboardForm() {
     handleSubmit,
   };
 }
+//대시보드 이름을 입력받아 유효성 검사 → 중복 검사 → 생성 후 페이지 이동까지 처리

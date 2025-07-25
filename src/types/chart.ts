@@ -15,3 +15,5 @@ export interface Chart {
   data: ChartData;
   order?: number;
 }
+
+//내부 로직에서 타입 체크할 때

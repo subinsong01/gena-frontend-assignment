@@ -2,7 +2,6 @@
 
 import { useSearchParams } from "next/navigation";
 import ChartForm from "@/components/ChartForm";
-import { toast } from "react-toastify";
 
 export default function ChartPage() {
   const searchParams = useSearchParams();
@@ -20,6 +19,6 @@ export default function ChartPage() {
       showPreview={mode === "configure"}
       showDashboardName={mode === "configure"}
       showBackButton={mode === "configure"}
-    />
+    /> //configure인 경우에만 true값으로 반환
   );
 }

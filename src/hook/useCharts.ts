@@ -40,3 +40,4 @@ export function useCharts(dashboardId: string) {
 
   return { charts, setCharts: saveCharts, isLoading };
 }
+//차트 데이터 리스트를 로드/저장
