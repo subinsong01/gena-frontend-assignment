@@ -17,8 +17,6 @@ interface Props {
 }
 
 export default function DynamicChart({ chartType, data, className }: Props) {
-  console.log("chart.data", data);
-
   if (chartType === "number") {
     const value =
       typeof data === "object" &&

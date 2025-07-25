@@ -96,7 +96,6 @@ export default function ChartEditForm({
         numberValue={numberValue}
         labelsInput={labelsInput}
         valuesInput={valuesInput}
-        error={error}
         isLoading={false}
         onChartNameChange={setTitle}
         onChartTypeChange={handleChartTypeChange}

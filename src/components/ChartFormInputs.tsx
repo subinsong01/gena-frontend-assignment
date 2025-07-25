@@ -8,7 +8,6 @@ interface ChartFormInputsProps {
   numberValue: number | "";
   labelsInput: string;
   valuesInput: string;
-  error: string;
   isLoading: boolean;
   onChartNameChange: (value: string) => void;
   onChartTypeChange: (value: ChartType) => void;
@@ -23,7 +22,6 @@ export default function ChartFormInputs({
   numberValue,
   labelsInput,
   valuesInput,
-  error,
   isLoading,
   onChartNameChange,
   onChartTypeChange,
@@ -41,19 +39,7 @@ export default function ChartFormInputs({
           value={chartName}
           onChange={(e) => onChartNameChange(e.target.value)}
           disabled={isLoading}
-          aria-describedby={error ? "chart-name-error" : undefined}
-          aria-invalid={!!error}
         />
-        {error && (
-          <div
-            id="chart-name-error"
-            className="text-red-500 text-sm mt-1"
-            role="alert"
-            aria-live="polite"
-          >
-            {error}
-          </div>
-        )}
       </div>
 
       <DropdownSelect

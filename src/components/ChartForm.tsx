@@ -59,7 +59,7 @@ export default function ChartForm({
     e.preventDefault();
 
     if (!validateForm()) {
-      toast.error(error);
+      toast.error(error || "Please fill in all required fields.");
       return;
     }
 
@@ -108,13 +108,21 @@ export default function ChartForm({
       )}
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        {error && (
+          <div
+            className="text-error-color text-sm"
+            role="alert"
+            aria-live="polite"
+          >
+            {error}
+          </div>
+        )}
         <ChartFormInputs
           chartName={formData.chartName}
           chartType={formData.chartType}
           numberValue={formData.numberValue}
           labelsInput={formData.labelsInput}
           valuesInput={formData.valuesInput}
-          error={error}
           isLoading={isLoading}
           onChartNameChange={(value) => updateFormData("chartName", value)}
           onChartTypeChange={(value) => updateFormData("chartType", value)}

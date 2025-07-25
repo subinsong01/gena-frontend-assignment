@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import ChartForm from "@/components/ChartForm";
+import { toast } from "react-toastify";
 
 export default function ChartPage() {
   const searchParams = useSearchParams();
